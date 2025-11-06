@@ -1,0 +1,50 @@
+/* body {
+  background-image: url(../img/1920-x-1080-minimalist-wallpaper-h1w6jjrjbvdobi7a.jpg);
+  background-size: 93%;
+  display: flex;
+  justify-content: center;
+} */
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === ANIMACIONES GAMER === */
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 6px rgba(0,255,170,0.8), 0 0 12px rgba(0,255,170,0.5); }
+  50% { text-shadow: 0 0 14px rgba(0,255,170,1), 0 0 22px rgba(0,255,170,0.8); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse-fast {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+/* Clases utilitarias */
+.animate-fade-in { animation: fade-in 0.7s ease-out forwards; }
+.animate-slide-down { animation: slide-down 0.8s ease-out forwards; }
+.animate-slide-up { animation: slide-up 0.8s ease-out forwards; }
+.animate-glow { animation: glow 2s infinite ease-in-out; }
+.animate-float { animation: float 4s infinite ease-in-out; }
+.animate-pulse-fast { animation: pulse-fast 1.2s infinite ease-in-out; }
